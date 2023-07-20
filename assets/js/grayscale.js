@@ -39,5 +39,5 @@
     // Collapse the navbar when page is scrolled
     document.addEventListener("scroll", collapseNavbar);
   }
-
+  console.log("CREATE BY AVISHKA UDARA");
 })(); // End of use strict

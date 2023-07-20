@@ -2,14 +2,14 @@
     {
         "id": 1,
         "currency_name": "Deriv",
-        "selling": "1.00",
-        "buying": "2.00"
+        "selling": "6677.00",
+        "buying": "865.00"
     },
     {
         "id": 2,
         "currency_name": "SKRILL",
-        "selling": "678.00",
-        "buying": "876.00"
+        "selling": "3.00",
+        "buying": "4.00"
     },
     {
         "id": 3,

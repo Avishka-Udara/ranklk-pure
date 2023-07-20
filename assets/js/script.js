@@ -1,38 +1,37 @@
-// Function to open the popup
-function openPopup(curr) {
-    if (curr == 'deriv') {
-        document.getElementById("popup-skrill").classList.remove("visible");
-        document.getElementById("popup-usdt").classList.remove("visible");
-        document.getElementById("popup-payoneer").classList.remove("visible");
-        document.getElementById("popup-deriv").classList.add("visible");
-    }
-    else if (curr == 'skrill') {
-        document.getElementById("popup-deriv").classList.remove("visible");
-        document.getElementById("popup-usdt").classList.remove("visible");
-        document.getElementById("popup-payoneer").classList.remove("visible");
-        document.getElementById("popup-skrill").classList.add("visible");
-    }
-    else if (curr == 'usdt') {
-        document.getElementById("popup-deriv").classList.remove("visible");
-        document.getElementById("popup-skrill").classList.remove("visible");
-        document.getElementById("popup-payoneer").classList.remove("visible");
-        document.getElementById("popup-usdt").classList.add("visible");
-    }
-    else if (curr == 'payoneer') {
-        document.getElementById("popup-deriv").classList.remove("visible");
-        document.getElementById("popup-skrill").classList.remove("visible");
-        document.getElementById("popup-usdt").classList.remove("visible");
-        document.getElementById("popup-payoneer").classList.add("visible");
-    }
-    // Add the "visible" class to show the popup
+var animationContainer = document.getElementById("logo-animation-container");
+var animationData = 'assets/data.json'; // The path to the animation json
+var animationOptions = {
+    container: animationContainer,
+    renderer: 'svg', // Required
+    loop: true,
+    autoplay: true,
+    path: animationData
     
+};
+console.log("CREATE BY AVISHKA UDARA");
+// Initialize the animation
+var animation = lottie.loadAnimation(animationOptions);
+
+
+function closePopup() {
+    // Remove the "visible" class to hide all popups
+    const popups = document.querySelectorAll(".popup");
+    popups.forEach((popup) => {
+        popup.classList.remove("visible");
+        // Set the z-index of the popup to a negative value when closing
+        popup.style.zIndex = -1;
+    });
 }
 
-// Function to close the popup
-function closePopup() {
-    // Remove the "visible" class to hide the popup
-    document.getElementById("popup-deriv").classList.remove("visible");
-    document.getElementById("popup-skrill").classList.remove("visible");
-    document.getElementById("popup-usdt").classList.remove("visible");
-    document.getElementById("popup-payoneer").classList.remove("visible");
+function showPopup(popupId) {
+    // Hide all popups first to ensure only one is visible at a time
+    closePopup();
+
+    // Show the specific popup by adding the "visible" class
+    const popupToShow = document.getElementById(popupId);
+    if (popupToShow) {
+        popupToShow.classList.add("visible");
+        // Set the z-index of the popup to a higher value when showing
+        popupToShow.style.zIndex = 9999;
+    }
 }
