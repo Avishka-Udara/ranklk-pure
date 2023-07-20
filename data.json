@@ -1,14 +1,26 @@
 [
     {
-        "selling": 111,
-        "buying" : 222
+        "id": 1,
+        "currency_name": "Deriv",
+        "selling": "1.00",
+        "buying": "2.00"
     },
     {
-        "selling": 333,
-        "buying" : 444
+        "id": 2,
+        "currency_name": "SKRILL",
+        "selling": "678.00",
+        "buying": "876.00"
     },
     {
-        "selling": 777,
-        "buying" : 999
+        "id": 3,
+        "currency_name": "USDT",
+        "selling": "5.00",
+        "buying": "6.00"
+    },
+    {
+        "id": 4,
+        "currency_name": "Payoneer",
+        "selling": "7.00",
+        "buying": "8.00"
     }
 ]
